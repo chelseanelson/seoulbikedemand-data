@@ -1,0 +1,97 @@
+---
+title: "Progress Memo"
+subtitle: |
+  | Final Project 
+  | Data Visualization (STAT 302)
+author: "Chelsea Nelson"
+date: today
+format:
+  html:
+    toc: true
+    embed-resources: true
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## Data source
+
+```{r}
+#| label: loading-packages
+#| echo: false
+#| message: false
+
+library(tidyverse)
+```
+
+I will be using the Seoul Bike Sharing Demand Prediction dataset. [^1]
+This dataset provides insights into the number of bikes rented per hour
+for a full year from December 1st, 2017 to November 30th, 2018 in Seoul,
+South Korea. This is alongside corresponding weather information to help
+us see the relationship between bike sharing demand and weather
+conditions. The dataset looks specifically at temperature, humidity,
+windspeed, visibility, solar radiation, snowfall, and rainfall.
+
+[^1]: This dataset was sourced from [Kaggle Seoul Bike Sharing Demand
+    Prediction
+    Dataset](https://www.kaggle.com/datasets/joebeachcapital/seoul-bike-sharing/data).
+
+## Basic data description
+
+```{r}
+#| label: loading-dataset
+#| message: false
+#| echo: false
+
+# loading dataset
+seoulbike_data <- read_csv("data/SeoulBikeData.csv",  
+                           locale = locale(encoding = "latin1"))
+
+seoulbike_data %>% reactable::reactable()
+ 
+
+```
+
+In terms of observations there are 8760 observations, which is a
+combination of every hour of every day for a full year. Additionally,
+there are 14 variables in the original dataset, however I will add
+another variable which will be a date-time variable. There is no
+instance of missingness in my dataset.
+
+```{r}
+#| label: skimming_data 
+#| echo: false
+
+seoulbike_data %>% skimr::skim_without_charts() 
+```
+
+## Why this data
+
+I choose this data, because I really love to see the usage of more
+public transportation by people around the globe as we are in this era
+of the rise of global warming and a need to assess different ways that
+we has people can help to solve it. Additionally, I think it would be
+interesting to see portray and showcase which factors play a larger role
+in the collective decision to use or not use public transportation, such
+bike sharing. I also think that this is a lot of data both from the
+observation and variable point of view, thus I really want to challenge
+myself to make great looking visualizations to really represent these
+relationships between bike sharing and different types of weather
+conditions.
+
+## Visualization plan
+
+Currently I plan to make a dashboard, with about 3 different pages where
+in the first page it allows for the user to look at bike sharing numbers
+to each weather condition separately, providing both a plot and a
+correlation visualization. The second page will allow users to look at
+multiple weather conditions and their relationship to bike sharing
+numbers at once. Finally, I think I will allow for users to see how
+different months or seasons compare to each other overall in terms of
+bike sharing demands, whiles also highlighting the different factors
+that play into this.
+
+Additionally, within all of these, I will probably focus on the weather
+conditions that correspond/correlate to bike sharing demands the most
+after doing my own future research and correlation statistics on my
+dataset.

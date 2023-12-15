@@ -1,0 +1,110 @@
+---
+title: "Seoul Bike Sharing Demand Insights and Additional Information"
+subtitle: |
+  | Final Project 
+  | Data Visualization (STAT 302)
+author: "Chelsea Nelson"
+date: today
+
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## Core Insights Communicated 
+::: {.callout-note appearance="minimal" icon=false}
+
+## Question
+
+What is the core concept(s) or insight(s) into the data that you believe the 
+visualization communicates? If you choose to include animation then explain 
+why animation helps. If you build an app then explain your choice of widgets 
+and what about the data it help users understand.
+
+:::
+
+Some core concepts communicated include correlation patterns, 
+individual variables and groups of variables impacts on bike rentals, 
+and the seasonal and monthly variations in rented bike counts based on 
+specific weather conditions. 
+
+In terms of correlation patterns, the visualizations used allow for the user 
+to pick up on potential correlations both between our main variable, 
+rented bike count, and the different weather conditions, but also between 
+the different weather conditions themselves as well. Specifically from plot 2, 
+we see that the temperature variable has the strongest positive correlation and 
+influence on renting bike count, whereas wind speed as the weakest positive 
+correlation to renting bike count. In the opposite direction, humidity has the 
+strongest negative correlation, causing renting bike count to decrease as the 
+humidity increases, whereas rainfall has the weakest negative correlation on 
+bike renting count. 
+
+As we know that correlation does not imply causation, 
+it's useful to complement correlation analysis with visualizations like scatter 
+plots to gain a more comprehensive understanding of the data, thus we should 
+turn our attention towards looking at individual weather conditions and 
+their full relationships with rented bike count. Some insights that can be 
+obtain through looking at these plots is the spread and placement of the points 
+in correlate to their associate linear model line. Specifically, looking 
+at the previously stated weather conditions (temperature, humidity, rainfall,
+wind speed), temperature although having a large spread, the points tend to move 
+in direction with the associated linear regression line, thus proving that 
+the relationship between temperature and the amount of bikes rent is relatively
+constant and strong. We see a similar trend when looking at the humidity 
+variable, as the points tend to cluster closer and closer negatively as humidity 
+levels rise, however there tend to be a lot more outliers to this plot, 
+bringing reason to why the relationship is not as strong. Looking at the plot
+associated with the wind speed variable there seems to be some kind of positive
+relationship between wind speed and renting bike count, however that is until 
+wind speed is more 4 m/s as it seems to drop afterwards not keeping up with
+the previously associated trend. However, this could be due to wind speeds over 
+4 m/s are pretty uncommon compared to wind speeds under 4 m/s. 
+Lastly, when looking at rainfall we can visually see that the amount of rainfall
+plays a large role in if people bike ride or not as we see the number of people
+renting bikes drop drastically even when it rains only a little bit. Thus 
+through using the widget associated with my bivariate scatter plot (selectInput),
+I am allowing the user to visualizes the relationship between a selected 
+weather variable and the count of rented bikes. Offering further insights 
+into the potential linear relationship between the chosen weather condition 
+and bike rentals.
+
+In order to expand on these relationships, I turned my attention towards 
+multivariate linear models and how we can use our weather condition variables 
+help to predict and determine how many people will rent a bike that day, thus 
+showcasing how much influence they have on the number. Within this, the widget 
+I used (selectInput) allowed for the user to select which variables they 
+wanted to have within their linear model. On default, the user will assess
+a linear model where temperature and rainfall are the respective predictor 
+variables. Thus I will be using this as my example of how insights can be gained
+from the associated plot and linear regression equation. From the the linear
+equation, we learn that rainfall seems to have a larger negative impact on the 
+amount of people that rent a bike than the positive impact that temperature has,
+when we assess the two variables together and apart in their interacts to predict
+the amount of bikes that will be rented. Additionally through our regression 
+plots we see the distributions of both variables, however compare to in Plot 3,
+we also see how each impact the conditions of the other as we keep one 
+constant, thus seeing how the amount of rainfall affects and influences the 
+temperature and vice versa. 
+
+Finally, I looked at how we can gain even more in depth insights by taking what 
+we learned in Plot 3 and breaking it down to different levels of months and 
+seasons. Thus similar to the previous plots in order to create them, I used 
+widgets which allowed the user to select what they want to look at (selectInput),
+but now asking in addition to which weather variable they wish to see, if they
+want it to be grouped by month or season. This let the user see insights from 
+two levels, seeing which months or seasons tend to have the highest average 
+amount of bikes rented during them, but also how the weather conditions 
+might play different roles or have different impacts based on the time of year. 
+For example, if we look at temperature for each season, we see that 
+temperature has a positive relationship with the rented bike count for 
+each season, however the magnitude of the relationship seems to change 
+depending on the season. Similar observations can be found looking at 
+different combinations of the weather variables with grouping by months 
+or seasons.
+
+In terms of further analysis, it would be good to also separate the data based 
+on the different time periods as the relationship between the different hours 
+and how they compare to each other also plays a larger part in these 
+relationships of the number of bikes being rented. 
+
