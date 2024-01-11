@@ -377,8 +377,7 @@ server <- function(input, output) {
              theme(plot.title = element_text(size = 15, hjust = 0.5, face = 
                                                  "bold"),
                    plot.subtitle = element_text(size = 13, hjust = 0.5)) + 
-             scale_y_continuous(limits = c(0,NA), 
-                                labels = scales::label_number_si())
+             scale_y_continuous(limits = c(0,NA))
     })
 
     
@@ -497,9 +496,8 @@ server <- function(input, output) {
                 theme(plot.title = element_text(size = 15, hjust = 0.5, 
                                                 face = "bold"),
                       plot.subtitle = element_text(size = 13, hjust = 0.5)) + 
-                scale_y_continuous(limits = c(0,NA), 
-                                   labels = scales::label_number_si())
-
+                scale_y_continuous(limits = c(0,NA))
+ 
         } else if (input$seasons_month_var == "seasons") {
             seoulbike_data %>% ggplot(aes(x_var_ms, rented_bike_count)) + 
                 geom_col() + 
@@ -514,8 +512,7 @@ server <- function(input, output) {
                 theme(plot.title = element_text(size = 15, hjust = 0.5,
                                                  face = "bold"),
                       plot.subtitle = element_text(size = 13, hjust = 0.5)) + 
-                scale_y_continuous(limits = c(0,NA), 
-                                   labels = scales::label_number_si())
+                scale_y_continuous(limits = c(0,NA))
         }
         
     })
