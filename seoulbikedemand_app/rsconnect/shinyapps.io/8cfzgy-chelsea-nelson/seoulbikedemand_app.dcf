@@ -1,0 +1,12 @@
+name: seoulbikedemand_app
+title: seoulbikedemand_app
+username: 8cfzgy-chelsea-nelson
+account: 8cfzgy-chelsea-nelson
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10908175
+bundleId: 8134014
+url: https://8cfzgy-chelsea-nelson.shinyapps.io/seoulbikedemand_app/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
