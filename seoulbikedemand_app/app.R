@@ -149,6 +149,7 @@ ui <- fluidPage(
                           larger roles in the collective decision to use or 
                           not use sources of public transportation, such as 
                           bike sharing."),
+    p("If you would like to see the code behind this Shiny App, I have provided the", a("Github Repo link", href = "https://8cfzgy-chelsea-nelson.shinyapps.io/seoulbikedemand_app/"), "here."),
                         br(),
                         h4("Explaining the Visualizations Shown"),
                         p(strong("Plot 1"),"is a correlation matrix plot that 
@@ -165,6 +166,7 @@ ui <- fluidPage(
                           specifically exploring the 
                           correlations of the weather conditions with the 
                           rented bike count."),
+                      
                      align = "center"),
                      mainPanel(width = 6,
                          plotOutput("CorrelationPlot_one_one"),
