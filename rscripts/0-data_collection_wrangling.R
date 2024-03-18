@@ -1,8 +1,9 @@
 ## loading packages 
 library(tidyverse)
+library(here)
 
 # Importing CSV file ----
-seoulbike_data <- read_csv("data/SeoulBikeData.csv",  
+seoulbike_data <- read_csv(here("data/raw/SeoulBikeData.csv"),  
                            locale = locale(encoding = "latin1")) %>%
   janitor::clean_names()
 seoulbike_data
@@ -40,4 +41,4 @@ seoulbike_data %>% relocate(datetime)
 
 seoulbike_data %>% distinct(seasons)
 
-write_rds(seoulbike_data, file = "data/seoulbike_data.rds")
+write_rds(seoulbike_data, file = here("data/seoulbike_data.rds"))
