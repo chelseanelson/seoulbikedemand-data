@@ -1,22 +1,9 @@
-## Datasets
+## Rscripts
 
-This repository contains datasets and related materials for usage in my project.
+`0-data_collection_wrangling.R` : R script containing the initial setup 
 
-`diabetes_data.rds` : RDS file containing my created balanced dataset 
-
-`diabetes_data_codebook.txt` : associated codebook for the dataset
-
-## Folders
-
-`recipes/` : contains the recipes created to be used with the models 
-
-`model_data/` : contains all the data splits (testing, training, and V-folded data)
-
-`raw/` : contains raw/original data files.
-
-`tuned_models/` : contains all of the tuned versions of the models generated
-
-`fitted_models/` : contains all of the fitted resampled versions of the models generated
+`1-data_formatting.R` : R script containing the data formatting and processing conducted for making the
+shiny dashboard
 
 
 
