@@ -8,7 +8,8 @@ library(shinythemes)
 library(patchwork)
 library(car)
 library(broom)
-seoulbike_data <- read_rds("data/seoulbike_data.rds")
+library(here)
+seoulbike_data <- read_rds(here("data/seoulbike_data.rds"))
 
 ### Data Formatting ----
 

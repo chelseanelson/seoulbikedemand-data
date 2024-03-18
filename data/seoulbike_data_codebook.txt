@@ -1,0 +1,34 @@
+Seoul Bike Demand Dataset Codebook 
+
+A data frame with 8760 observations on the following 15 variables:
+
+`date`: the date in the format: yyyy-mm-dd
+
+`seasons`: A factor with levels: Spring, Summer, Autummn, and Winter indicating the current season 
+
+`holiday` - A factor with two levels: No holiday and Holiday indicating if it was a holiday or not
+
+`functioning_day` - A factor with two levels: Yes and No indicating if it was a functioning 
+day or not
+
+`rented_bike_count` - amount of bikes rented
+
+`hour` - hour of the day 
+
+`temperature_c` - temperature in celsius
+
+`humidity_percent` - humidity in percent 
+ 
+`wind_speed_m_s` - wind speed in m/s
+
+`visibility_10m` - visibility in 10m 
+
+`dew_point_temperature_c` - dew point temperauture in celsius
+
+`solar_radiation_mj_m2` - solar radiation in MJ/m2
+
+`rainfall_mm` - rainfaill in mm 
+
+`snowfall_cm` - snowfall in cm 
+
+`datetime` - the date and time in the format: yyyy-mm-dd hh:mm:ss 
