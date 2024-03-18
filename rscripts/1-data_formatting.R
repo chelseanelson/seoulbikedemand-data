@@ -90,3 +90,4 @@ average_per_month <- seoulbike_data %>%
 average_per_season <- seoulbike_data %>%
   group_by(seasons) %>%
   summarise(average_rented_bike_count = mean(rented_bike_count))
+ 
